@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Play, Globe, Thermometer, Mountain, Droplets } from 'lucide-react';
 
@@ -117,7 +116,14 @@ const MarsWebsite = () => {
             </div>
 
             <div className="flex space-x-6 pt-8">
-              <button className="group flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-red-600 px-8 py-4 rounded-full hover:scale-105 transition">
+              <button 
+                onClick={() => {
+                  if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                  }
+                }}
+                className="group flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-red-600 px-8 py-4 rounded-full hover:scale-105 transition"
+              >
                 <Play className="w-5 h-5 text-white" />
                 <span className="text-white font-semibold">Explore Mars</span>
               </button>
