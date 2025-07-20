@@ -5,7 +5,7 @@ import GlassCard from './components/mars';
 
 function App() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="min-h-screen w-full bg-black">
 
       <div className="relative z-20">
         <GlassCard />
